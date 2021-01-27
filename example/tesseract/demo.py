@@ -11,8 +11,13 @@ import pytesseract
 import os
 from PIL import Image
 
+
 def main():
-    image = Image.open('{}/demo.png'.format(os.getcwd()))
+    # print os.getcwd() #获取当前工作目录路径
+    # print os.path.abspath('.') #获取当前工作目录路径
+    #使用当前文件的相对路径，使用工作路径找不到文件 bug 20200127
+    relative_path = os.path.dirname(os.path.abspath(__file__))
+    image = Image.open('{}/demo.png'.format(relative_path))
     #image.show() #打开图片 demo.png
     text = pytesseract.image_to_string(image, lang='chi_sim')  # 使用简体中文解析图片
     print(text) #识别出来的文字

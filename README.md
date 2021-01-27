@@ -1,6 +1,13 @@
 # python-package
 python常用的一些类包汇总说明,都是基于python3写的或者直引用的一些官方demo,pip3安装我用的是淘宝的源,争取每日更新一个吧^_^
 
+## 数据库
+
+### [pymysql 链接mysql的库](https://github.com/PyMySQL/PyMySQL)
+[example](./example/pymysql/)
+
+pymysql是在 Python3.x 版本中用于连接 MySQL 服务器的一个库，Python2中则使用mysqldb。
+
 ### [Tesseract OCR光学字符识别](https://github.com/madmaze/pytesseract)
 [example](./example/tesseract/)
 
