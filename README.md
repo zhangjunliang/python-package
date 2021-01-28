@@ -41,6 +41,11 @@ redis-py 操作redis的库,The Python interface to the Redis key-value store.
 
 ## 爬虫
 
+### [lxml](https://github.com/lxml/lxml)
+[example](./example/lxml/)
+
+lxml是python的一个解析库，支持HTML和XML的解析，支持XPath解析方式，而且解析效率非常高
+
 ### Scrapy
 
 快速屏幕截取和网页抓取的框架
