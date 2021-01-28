@@ -48,9 +48,11 @@ redis-py 操作redis的库,The Python interface to the Redis key-value store.
 ## 图像处理
 
 
-### Pillow
+### [Pillow](https://github.com/python-pillow/Pillow)
+[example](./example/pillow/)
 
 PIL：Python Imaging Library，图像处理标准库,功能非常强大，API非常简单易用。由于PIL仅支持到Python 2.7，加上年久失修，于是一群志愿者在PIL的基础上创建了兼容的版本，名字叫Pillow，支持最新Python 3.x，又加入了许多新特性，建议直接安装使用Pillow。
+
 ### [Tesseract OCR光学字符识别](https://github.com/madmaze/pytesseract)
 [example](./example/tesseract/)
 

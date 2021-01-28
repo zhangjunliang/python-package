@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-
 """
 级别排序:CRITICAL > ERROR > WARNING > INFO > DEBUG
 debug : 打印全部的日志,详细的信息,通常只出现在诊断问题上
@@ -11,7 +10,6 @@ critical : 打印critical级别,一个严重的错误,这表明程序本身可�
 
 import logging
 import os
-import sys
 
 
 class DemoLog(object):
