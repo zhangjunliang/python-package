@@ -44,7 +44,12 @@
 [example](./example/lxml/)
 
     lxml是python的一个解析库，支持HTML和XML的解析，支持XPath解析方式，而且解析效率非常高
-
+    问题1：Scrapy使用tbody解析不到内容？
+        原因：html = etree.parse('test.html', parser=parser)
+            html = etree.HTML(resposne.text) 二者格式化代码规则可能不同
+        建议：如果解析在线网页，不要添加tbody标签，
+            反则解析本地(离线)网页，添加tbody标签
+    
 ### Scrapy
 
     快速屏幕截取和网页抓取的框架
