@@ -1,7 +1,13 @@
 # python-package
 python常用的一些类包汇总说明,都是基于python3写的或者直引用的一些官方demo,pip3安装我用的是淘宝的源,争取每日更新一个吧^_^
 
+## Python标准库
 
+### logging
+[example](./example/logging/)
+
+Python标准库，日志文件生成管理函数库。[logbook](https://github.com/getlogbook/logbook) logging的替换品,有兴趣的可以自己看看。
+级别排序:CRITICAL > ERROR > WARNING > INFO > DEBUG
 
 ## 数据库
 

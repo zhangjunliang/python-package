@@ -1,0 +1,5 @@
+2021-01-28 15:24:18 demo 16580 DEBUG {'code': 0, 'message': '打印全部的日志, 详细的信息, 通常只出现在诊断问题上', 'data': {'debug': '调式信息'}}
+2021-01-28 15:24:18 demo 16580 INFO {'code': 1, 'message': '打印info, warning, error, critical级别的日志, 确认一切按预期运行', 'data': {'data': '数据'}}
+2021-01-28 15:24:18 demo 16580 WARNING {'code': 2, 'message': '打印warning,error,critical级别的日志,一个迹象表明,一些意想不到的事情发生了,或表明一些问题在不久的将来(例如。磁盘空间低”),这个软件还能按预期工作', 'data': {'warning': '警告'}}
+2021-01-28 15:24:18 demo 16580 ERROR {'code': 3, 'message': '打印error, critical级别的日志, 更严重的问题, 软件没能执行一些功能', 'data': {'Exception': 'Error Exception'}}
+2021-01-28 15:24:18 demo 16580 CRITICAL {'code': 4, 'message': '打印critical级别, 一个严重的错误, 这表明程序本身可能无法继续运行', 'data': {'Exception': 'Error Exception'}}
