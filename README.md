@@ -108,4 +108,8 @@
 2. Cryptography
     
     > Cryptography的目标是建立一个标准Python加密库，支持 Python 2.6-2.7, Python 3.3+, and PyPy 2.6+。
-                                                                                                        
+  
+3. [Faker](https://github.com/joke2k/faker)
+    
+    > Faker是一个Python软件包，可为您生成伪造数据。无论您是需要引导数据库，创建美观的XML文档，
+      填充持久性以进行压力测试还是匿名化从生产服务中获取的数据，Faker都是您的理想之选。                                                                                                   
