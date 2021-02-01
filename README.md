@@ -76,7 +76,18 @@
 
     > python的光学字符识别（OCR）工具，识别并“读取”图像中嵌入的文本，是Google Tesseract-OCR Engine的包装。
     可以用作tesseract的独立调用脚本，可以读取Pillow和Leptonica图像库支持的所有图像类型，包括jpeg，png，
-    gif，bmp，tiff等。此外，打印和识别的文本，而不是将其写入文件。
+    gif，bmp，tiff等。此外，打印和识别的文本，而不是将其写入文件。                                                                                                        >
+
+3. qrcode 二维码生成
+
+    - [python-qrcode](https://github.com/lincolnloop/python-qrcode)
+    - [example](./example/qrcode/)
+    > 二维码（QR码）生成器,支持矢量图生成
+
+    - [myqr 二维码](https://github.com/sylnsfar/qrcode)
+    - demo可以自己去搜索
+    > 可生成普通二维码、带图片的艺术二维码（黑白与彩色）、动态二维码（黑白与彩色）
+                                                                                                
 
 ## 机器学习
 
