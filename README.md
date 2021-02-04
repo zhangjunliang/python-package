@@ -8,6 +8,22 @@
      
     python常用的一些类包汇总说明,基于python3一些简单的demo,争取每日更新一个吧^_^
 
+## virtualenv 虚拟环境
+
+1. virtualenv 
+    
+    > 为了解决各个项目的共同依赖同一个环境，造成版本冲突等，virtualenv创建一个干净的环境，在这个环境下，进行Python项目的开发等，
+      就成为一个个独立的项目，从而避免一系列麻烦，提升开发效率。
+    
+    > virtualenv 的一个最大的缺点就是：
+      每次开启虚拟环境之前要去虚拟环境所在目录下的 bin 目录下 source 一下 activate，这就需要我们记住每个虚拟环境所在的目录。
+
+2. [virtualenvwrapper](./example/virtualenv/README.md)
+
+    > virtualenvwrapper管理你的虚拟环境（virtualenv），其实他就是统一管理虚拟环境的目录，并且省去了source的步骤。
+    
+3. 建议直接使用 virtualenvwrapper，具体virtualenv的操作就不详细写了
+
 ## 标准库
 
 1. logging
