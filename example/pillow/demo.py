@@ -1,7 +1,6 @@
 # -*-encoding:utf-8-*-
 '''
-1. 安装Pillow
-　　pip3 insatll pillow -i http://mirrors.aliyun.com/pypi/simple  --trusted-host mirrors.aliyun.com
+安装 pip3 insatll pillow -i http://mirrors.aliyun.com/pypi/simple  --trusted-host mirrors.aliyun.com
 '''
 
 

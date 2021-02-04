@@ -17,6 +17,17 @@
     > Python标准库，日志文件生成管理函数库。[logbook](https://github.com/getlogbook/logbook) logging的替换品,
     有兴趣的可以自己看看。级别排序:CRITICAL > ERROR > WARNING > INFO > DEBUG
 
+## 算法
+1. pybloom_live 布隆过滤器
+    
+    - [example](./example/pybloom_live/)
+
+    > pybloom_live下面有俩个方法，BloomFilter（定容）和ScalableBloomFilter（可伸缩的）。
+     
+    > 是一种以bitmap集合为基础的投影去重算法，其应用场景如Url的排重，垃圾邮箱地址的过滤等邻域
+
+    > 布隆算法的核心思想就是对url进行多次不同算法的hash，得到不同的hashcode，最后再将这些hashcode比较后映射到同一个bitmap上
+
 ## 数据
 
 1. [pymysql](https://github.com/PyMySQL/PyMySQL)
