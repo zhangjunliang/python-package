@@ -8,7 +8,7 @@
      
     python常用的一些类包汇总说明,基于python3一些简单的demo,争取每日更新一个吧^_^
 
-## 打包和发布
+## [Python库打包分发](./example/setuptools/README.md)
     
 1. [setuptools](https://github.com/pypa/setuptools)
     
@@ -16,24 +16,18 @@
     
     > setuptools 是 python 的基础包工具，可以帮助我们轻松的下载，构建，安装，升级，卸载 python的软件包。
     
-    > Python 库打包的格式包括 Wheel 和 Egg。Egg 格式是由 setuptools 在 2004 年引入，而 Wheel 格式是由 PEP427 在 2012 年定义。使用 Wheel 和 Egg 安装都不需要重新构建和编译，其在发布之前就应该完成测试和构建。
-
-    > Egg 和 Wheel 本质上都是一个 zip 格式包，Egg 文件使用 .egg 扩展名，Wheel 使用 .whl 扩展名。Wheel 的出现是为了替代 Egg，其现在被认为是 Python 的二进制包的标准格式。
+    > Python库打包的格式包括Wheel和Egg。Egg格式是由setuptools在2004年引入，而Wheel格式是由PEP427在2012年定义。
+    使用Wheel和Egg安装都不需要重新构建和编译，其在发布之前就应该完成测试和构建。
     
-    > [setup.py](https://github.com/navdeep-G/setup.py): 该仓库存在以提供一个示例setup.py文件，该文件可用于引导您的下一个Python项目。它包括的某些高级模式和最佳实践setup.py，以及一些已注释（很好）的方法。
-
+    > Egg和Wheel本质上都是一个zip格式包，Egg文件使用.egg扩展名，Wheel使用.whl扩展名。
+    Wheel的出现是为了替代Egg，其现在被认为是Python的二进制包的标准格式。
+    
 2. pip
 
     > pip 是python软件包的安装和管理工具， 有了这个工具， 我们只需要一个命令就可以轻松的python 的任意类库。    
 
-3. easy_insall
+    > easy_install和pip都提供了在线一键安装模块的傻瓜方便方式，而pip是easy_install的改进版，提供更好的提示信息，删除package等功能。老版本的python中只有easy_install，没有pip。
 
-    > easy_insall和pip都提供了在线一键安装模块的傻瓜方便方式，而pip是easy_install的改进版，提供更好的提示信息，删除package等功能。老版本的python中只有easy_install，没有pip。
-
-        安装方法
-        # tar -xvf pip-1.4.1.tar.gz  
-        # cd pip-1.4.1/  
-        # sudo python setup.py install 
 
 ## virtualenv 虚拟环境
 
