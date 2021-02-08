@@ -54,8 +54,20 @@
     
 - 建议直接使用 virtualenvwrapper，具体virtualenv的操作就不详细写了
 
-## 标准库
+## 标准库/内置模块
+  
+- multiprocessing
+    
+    多进程并发处理
+     
+- threading
 
+    多线程并发处理
+    
+- asyncio模块
+
+    协程并发处理
+            
 - logging
     
     - [example](./example/logging/)
