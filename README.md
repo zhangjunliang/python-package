@@ -10,7 +10,7 @@
 
 ## [Python库打包分发](./example/setuptools/README.md)
     
-1. [setuptools](https://github.com/pypa/setuptools)
+- [setuptools](https://github.com/pypa/setuptools)
     
     - [example](./example/setuptools/)
     
@@ -22,7 +22,7 @@
     - Egg和Wheel本质上都是一个zip格式包，Egg文件使用.egg扩展名，Wheel使用.whl扩展名。
     Wheel的出现是为了替代Egg，其现在被认为是Python的二进制包的标准格式。
     
-2. pip vs easy_install
+- pip vs easy_install
 
    - easy_install是setuptool包提供的第三方包安装工具，而pip是easy_install的改进版。老版本的python中只有easy_install，没有pip。
 
@@ -40,7 +40,7 @@
 
 ## virtualenv 虚拟环境
 
-1. virtualenv 
+- virtualenv 
     
     > 为了解决各个项目的共同依赖同一个环境，造成版本冲突等，virtualenv创建一个干净的环境，在这个环境下，进行Python项目的开发等，
       就成为一个个独立的项目，从而避免一系列麻烦，提升开发效率。
@@ -48,15 +48,15 @@
     > virtualenv 的一个最大的缺点就是：
       每次开启虚拟环境之前要去虚拟环境所在目录下的 bin 目录下 source 一下 activate，这就需要我们记住每个虚拟环境所在的目录。
 
-2. [virtualenvwrapper](./example/virtualenv/README.md)
+- [virtualenvwrapper](./example/virtualenv/README.md)
 
     > virtualenvwrapper管理你的虚拟环境（virtualenv），其实他就是统一管理虚拟环境的目录，并且省去了source的步骤。
     
-3. 建议直接使用 virtualenvwrapper，具体virtualenv的操作就不详细写了
+- 建议直接使用 virtualenvwrapper，具体virtualenv的操作就不详细写了
 
 ## 标准库
 
-1. logging
+- logging
     
     - [example](./example/logging/)
 
@@ -64,7 +64,7 @@
     有兴趣的可以自己看看。级别排序:CRITICAL > ERROR > WARNING > INFO > DEBUG
 
 ## 算法
-1. pybloom_live 布隆过滤器
+- pybloom_live 布隆过滤器
     
     - [example](./example/pybloom_live/)
 
@@ -76,13 +76,13 @@
 
 ## 数据
 
-1. [pymysql](https://github.com/PyMySQL/PyMySQL)
+- [pymysql](https://github.com/PyMySQL/PyMySQL)
     
     - [example](./example/pymysql/)
 
     > pymysql是在 Python3.x 版本中用于连接 MySQL 服务器的一个库，Python2中则使用mysqldb。
 
-2. [redis](https://github.com/WoLpH/redis-py)
+- [redis](https://github.com/WoLpH/redis-py)
     
     - [example](./example/redis/)
 
@@ -90,17 +90,17 @@
 
 ## web框架
 
-1. Django
+- Django
 
     > 流行的Python-Web框架，鼓励快速开发,并遵循MVC设计，开发周期短
 
-2. Flask
+- Flask
 
     > 轻量级web框架
 
 ## 爬虫
 
-1. [lxml](https://github.com/lxml/lxml)
+- [lxml](https://github.com/lxml/lxml)
 
     - [example](./example/lxml/)
 
@@ -113,13 +113,50 @@
         >建议：如果解析在线网页，不要添加tbody标签，
             反则解析本地(离线)网页，添加tbody标签
     
-2. Scrapy
+- Scrapy
 
     > 快速屏幕截取和网页抓取的框架,实话实说用了这个可能你就不想用别的了
 
+- Selenium 
+    
+    > Selenium是一系列基于Web的自动化工具，提供一套测试函数，用于支持Web自动化测试。函数非常灵活，
+    能够完成界面元素定位、窗口跳转、结果比较。支持多款主流浏览器，提供了功能丰富的API接口，经常被我们用作爬虫工具来使用。
+    
+    > selenium的缺点也很明显，比如速度太慢、对版本配置要求严苛，最麻烦是经常要更新对应的驱动。
+    还有些网页是可以检测到是否是使用了selenium。并且selenium所谓的保护机制不允许跨域cookies
+    保存以及登录的时候必须先打开网页然后后加载cookies再刷新的方式很不友好。
+
+- Pyppeteer [_2018年9月份之后几乎没更新过,导致很多bug根本没人修复_]
+    
+    - 另一款web自动化测试工具，支持的浏览器比较单一，但在安装配置的便利性和运行效率方面都要远胜selenium。
+    
+    - Puppeteer是Google基于Node.js开发的一个工具，主要是用来操纵Chrome浏览器的API，
+      通过Javascript代码来操纵Chrome浏览器的一些操作，用作网络爬虫完成数据爬取、Web程序自动测试等任务。其API极其完善，功能非常强大。
+    
+    - 而Pyppeteer实际上是Puppeteer的Python版本的实现，但他不是Google开发的，
+      是一位来自于日本的工程师依据Puppeteer的一些功能开发出来的非官方版本。
+
+- PyExecJS、PyV8、Js2Py
+
+    - PyExecJS
+    
+        > 主要是将JS代码运行在本地的JS环境中，优点是我们有多种JS环境的选择，官方推荐了PyV8、Node.js、PhantomJS、Nashorn四种，
+        当然缺点是必须安装一种环境导致不是很轻量，而且调用时有一个启动环境过程，还是有明显缓慢的
+    
+    - PyV8
+        
+        > Google官方将ChromeV8引擎用Python封装的库，和`PyExecJS`相比，
+        这个库很轻量，不需要额外装JS环境，因为V8本身就是环境，同时也因为不需要启动外部环境，执行速度很快。
+        
+    - Js2Py
+    
+        > 将 JS 代码直接转译成 Python 代码，这种方式可以摆脱调用 JS 环境的瓶颈，
+        但遗憾的是如果用于很长的混淆 JS 代码，转译过来的大概率会报错… 
+    
+
 ## 图像处理
 
-1. [Pillow](https://github.com/python-pillow/Pillow)
+- [Pillow](https://github.com/python-pillow/Pillow)
 
     - [example](./example/pillow/)
 
@@ -127,7 +164,7 @@
     加上年久失修，于是一群志愿者在PIL的基础上创建了兼容的版本，名字叫Pillow，支持最新Python 3.x，又加入了许多
     新特性，建议直接安装使用Pillow。
 
-2. [Tesseract OCR光学字符识别](https://github.com/madmaze/pytesseract)
+- [Tesseract OCR光学字符识别](https://github.com/madmaze/pytesseract)
 
     - [example](./example/tesseract/)
 
@@ -135,7 +172,7 @@
     可以用作tesseract的独立调用脚本，可以读取Pillow和Leptonica图像库支持的所有图像类型，包括jpeg，png，
     gif，bmp，tiff等。此外，打印和识别的文本，而不是将其写入文件。                                                                                                        >
 
-3. qrcode 二维码生成
+- Qrcode 二维码生成
 
     - [python-qrcode](https://github.com/lincolnloop/python-qrcode)
     - [example](./example/qrcode/)
@@ -148,13 +185,13 @@
 
 ## 机器学习
 
-1. TensorFlow
+- TensorFlow
 
     > 谷歌基于DistBelief进行研发的第二代人工智能学习系统。
 
 ## 其他
 
-1. Paramiko 
+- Paramiko 
 
     [example](./example/paramiko/)
 
@@ -162,11 +199,11 @@
     
     > 有了Paramiko以后，我们就可以在Python代码中直接使用SSH协议对远程服务器执行操作，而不是通过ssh命令对远程服务器进行操作。
     
-2. Cryptography
+- Cryptography
     
     > Cryptography的目标是建立一个标准Python加密库，支持 Python 2.6-2.7, Python 3.3+, and PyPy 2.6+。
   
-3. [Faker](https://github.com/joke2k/faker)
+- [Faker](https://github.com/joke2k/faker)
     
     > Faker是一个Python软件包，可为您生成伪造数据。无论您是需要引导数据库，创建美观的XML文档，
       填充持久性以进行压力测试还是匿名化从生产服务中获取的数据，Faker都是您的理想之选。                                                                                                   
