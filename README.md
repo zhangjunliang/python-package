@@ -14,20 +14,29 @@
     
     - [example](./example/setuptools/)
     
-    > setuptools 是 python 的基础包工具，可以帮助我们轻松的下载，构建，安装，升级，卸载 python的软件包。
+    - setuptools 是 python 的基础包工具，可以帮助我们轻松的下载，构建，安装，升级，卸载 python的软件包。
     
-    > Python库打包的格式包括Wheel和Egg。Egg格式是由setuptools在2004年引入，而Wheel格式是由PEP427在2012年定义。
+    - Python库打包的格式包括Wheel和Egg。Egg格式是由setuptools在2004年引入，而Wheel格式是由PEP427在2012年定义。
     使用Wheel和Egg安装都不需要重新构建和编译，其在发布之前就应该完成测试和构建。
     
-    > Egg和Wheel本质上都是一个zip格式包，Egg文件使用.egg扩展名，Wheel使用.whl扩展名。
+    - Egg和Wheel本质上都是一个zip格式包，Egg文件使用.egg扩展名，Wheel使用.whl扩展名。
     Wheel的出现是为了替代Egg，其现在被认为是Python的二进制包的标准格式。
     
-2. pip
+2. pip vs easy_install
 
-    > pip 是python软件包的安装和管理工具， 有了这个工具， 我们只需要一个命令就可以轻松的python 的任意类库。    
+   - easy_install是setuptool包提供的第三方包安装工具，而pip是easy_install的改进版。老版本的python中只有easy_install，没有pip。
 
-    > easy_install和pip都提供了在线一键安装模块的傻瓜方便方式，而pip是easy_install的改进版，提供更好的提示信息，删除package等功能。老版本的python中只有easy_install，没有pip。
-
+   - pip相对于easy_install进行了以下几个方面的改进:
+    
+        - 所有的包是在安装之前就下载了，所以不可能出现只安装了一部分的情况
+        - 在终端上的输出更加友好
+        - 对于动作的原因进行持续的跟踪。例如，如果一个包正在安装，那么pip就会跟踪为什么这个包会被安装
+        - 错误信息会非常有用
+        - 代码简洁精悍可以很好的编程
+        - 不必作为egg存档，能扁平化安装(仍然保存egg元数据)
+        - 原生的支持其他版本控制系统(Git,MercurialandBazaar)
+        - 加入卸载包功能
+        - 可以简单的定义修改一系列的安装依赖，还可以可靠的赋值一系列依赖包
 
 ## virtualenv 虚拟环境
 
