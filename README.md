@@ -88,6 +88,17 @@
 
 ## 数据
 
+- NumPy
+
+    > NumPy是使用Python进行科学计算的基础软件包。除其他外，它包括：
+        功能强大的N维数组对象。
+        精密广播功能函数。
+        集成 C/C+和Fortran 代码的工具。
+        强大的线性代数、傅立叶变换和随机数功能。
+          
+- pandas
+    > pandas是基于NumPy数组构建的，使数据预处理、清洗、分析工作变得更快更简单。pandas是专门为处理表格和混杂数据设计的，而NumPy更适合处理统一的数值数组数据。
+
 - [pymysql](https://github.com/PyMySQL/PyMySQL)
     
     - [example](./example/pymysql/)
