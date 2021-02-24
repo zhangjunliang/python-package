@@ -1,12 +1,13 @@
 # python-package
+
             ______________
             ___________(_)__  /
             ___  /____  /__  / 
             __  /____  / _  /  
             _____/__  /  /_/   
-               /___/  2021.01.27
+               /___/  2021 day day up
      
-    python常用的一些类包汇总说明,基于python3一些简单的demo,争取每日更新一个吧^_^
+    python常用的一些类包汇总说明，目的构建清晰知识体系，基于python3一些简单的demo
 
 ## [Python库打包分发](./example/setuptools/README.md)
     
