@@ -56,25 +56,189 @@
 - 建议直接使用 virtualenvwrapper，具体virtualenv的操作就不详细写了
 
 ## 标准库/内置模块
-  
-- multiprocessing
-    
-    多进程并发处理
-     
-- threading
 
-    多线程并发处理
-    
-- asyncio模块
+- 文本处理
 
-    协程并发处理
-            
-- logging
+    - string -- 字符串常量和模板
+    - textwrap -- 文本段落格式化 
+    - re -- 正则表达式
+    - difflib -- 字符比较
     
-    - [example](./example/logging/)
+- 数据结构
 
-    > Python标准库，日志文件生成管理函数库。[logbook](https://github.com/getlogbook/logbook) logging的替换品,
-    有兴趣的可以自己看看。级别排序:CRITICAL > ERROR > WARNING > INFO > DEBUG
+    - enum -- 枚举类型
+    - collections --- 数据类型容器
+    - array --- 序列化的固定类型结构
+    - heapq -- 堆排序算法
+    - bisect --- 维护有序列表 r
+    - queue --- 线程安全的 FIFO 队列
+    - struct --- 二进制数据结构
+    - weakref --- 实现对象的弱引用
+    - copy --- 对象复制
+    - pprint --- 格式化输出数据结构
+    
+- 算法
+
+    - functools --- 函数操作工具箱
+    - itertools --- 迭代器函数
+    - operator --- 内置操作符接口
+    - contextlib --- 上下文管理器工具
+
+- 日期和时间
+    
+    - time --- 时间模块
+    - datetime --- 日期和时间处理
+    - calendar --- 日期操作
+    
+- 数学模块
+    
+    - decimal --- 高精度计算模块
+    - fractions --- 分数运算
+    - random --- 伪随机数生成器
+    - math --- 数学函数
+    - statistics --- 统计学计算
+ 
+- 文件系统操作
+    
+    - os.path --- 跨平台的文件名操作
+    - pathlib --- 文件路径对象
+    - glob --- 文件名规则匹配
+    - fnmatch --- Unix 风格的 Glob 规则匹配
+    - linecache --- 高效率文件读取
+    - tempfile --- 临时文件对象
+    - shutil --- 高阶文件操作
+    - filecmp --- 文件对比
+    - mmap --- 内存映射模块
+    - codecs --- 字符编码和解码
+    - io --- 文本、二进制和原生流的 I/O 工具
+
+- 数据持久化和数据交换
+
+    - pickle — 对象序列华
+    - shelve — 实例对象的持久化
+    - dbm — Unix 键值数据库
+    - sqlite3 — 嵌入式关系型数据库
+    - xml.etree.ElementTree — XML 操作接口
+    - csv — 「逗号分隔值」文件
+ 
+- 数据压缩和归档   
+
+    - zlib — GNU zlib 压缩
+    - gzip — 读写 GNU zip 文件
+    - bz2 — bzip2 压缩格式
+    - tarfile — 访问 Tar 格式的文件
+    - zipfile — 访问 Zip 格式的文件
+
+- 加密服务
+    
+    - hashlib — 加密哈希算法
+    - hmac — 加密消息签名和验证
+       
+- **并行运算**
+
+    - subprocess --- 创建新进程
+    - signal --- 异步系统事件
+    - threading --- 多线程并发处理,进程内并发操作的管理
+    - multiprocessing --- 多进程并发处理，类似多线程
+    - asyncio --- 协程并发处理,异步 I/O，事件循环以及并发工具
+    - concurrent.futures --- 并发任务管理池
+
+- 网络模块
+
+    - ipaddress — 互联网地址
+    - socket — 互联网通讯
+    - selectors — I/O 多路复用抽象层
+    - select — 高效地等待 I/O
+    - socketserver — 创建网络服务器
+
+- 互联网数据处理
+   
+    - urllib.parse --- 将 URLs 拆分为各个组成部...
+    - urllib.request --- 访问网络资源
+    - urllib.robotparser --- 网络爬虫访问控制
+    - base64 --- 用 ASCII 编码二进制数据
+    - http.server --- 实现网络服务器的基本工具类
+    - http.cookies --- HTTP Cookies
+    - webbrowser --- 渲染展示网页
+    - uuid --- 通用唯一标识符
+    - json --- JavaScript Object Notation
+    - xmlrpc.client — XML-RPC 客户端类库
+    - xmlrpc.server --- 一个 XML-RPC 服务器
+
+- 邮件模块
+
+    - smtplib --- SMTP 协议客户端
+    - smtpd --- SMTP 服务器
+    - mailbox --- 管理 Email 规定文件
+    - imaplib --- IMAP4 客户端类库
+
+- 应用程序组成元素
+
+    - argparse --- 命令行选项和参数解析
+    - getopt --- 命令行选项解析
+    - readline --- GNU readline 库
+    - getpass --- 安全密码提示
+    - cmd --- 面向行的命令处理器
+    - shlex --- 解析 Shell 样式的语法
+    - configparser --- 使用配置文件
+    - logging --- 报告状态、错误和信息性消息
+        - [example](./example/logging/)
+        > 日志文件生成管理函数库。级别排序:CRITICAL > ERROR > WARNING > INFO > DEBUG
+                                                                            
+        > [logbook](https://github.com/getlogbook/logbook) logging的替换品,有兴趣的可以自己看看
+    - fileinput --- 命令行过滤器框架
+    - atexit --- 程序关闭回调
+    - sched --- 定时事件调度程序
+
+- 国际化和本地化
+
+    - locale — 本地人文接口
+    - gettext — 翻译消息
+ 
+- 开发者工具
+
+   - pydoc --- 模块的线上帮助文档
+   - doctest --- 通过文档来测试的模块
+   - unittest --- 自动化测试框架
+   - trace --- 追踪程序流
+   - traceback --- 异常和栈追踪
+   - cgitb --- 详细的追踪报告
+   - pdb --- 交互式调试器
+   - profile and pstats --- 性能分析器
+   - timeit --- 小块代码的时间测试
+   - tabnanny --- 缩进终结者
+   - compileall --- 原文件字节编译器
+   - pyclbr --- 类浏览器
+   - venv --- 虚拟环境
+   - ensurepip --- 安装 Python 包安装器
+
+- 运行时服务
+
+    - site — 整站范围内的配置信息
+    - sys — 系统范围内的配置信息
+    - os — 便捷地访问操作系统专属功能 
+    - platform — 系统版本信息
+    - resource — 系统资源管理
+    - gc — 垃圾收集器
+    - sysconfig — 命令解释器编译时配置
+
+- 语言工具
+
+    - warnings --- 非致命警报
+    - abc --- 抽象基类
+    - dis --- Python 字节码反编译程序
+    - inspect --- 审查活动元素
+
+- 模块和扩展包
+
+    - importlib — Python 的模块载入机制
+    - pkgutil — 扩展包工具
+    - zipimport — 从 Zip 文件中加载 Python 代码
+
+- Unix 专属的服务
+ 
+    - pwd --- Unix 密码数据库
+    - grp --- Unix 用户组数据库
 
 ## 算法
 - pybloom_live 布隆过滤器
@@ -230,4 +394,14 @@
 - [Faker](https://github.com/joke2k/faker)
     
     > Faker是一个Python软件包，可为您生成伪造数据。无论您是需要引导数据库，创建美观的XML文档，
-      填充持久性以进行压力测试还是匿名化从生产服务中获取的数据，Faker都是您的理想之选。                                                                                                   
+      填充持久性以进行压力测试还是匿名化从生产服务中获取的数据，Faker都是您的理想
+
+- [Supervisor](https://github.com/Supervisor/supervisor)
+
+    > 一套通用的进程管理程序，能将一个普通的命令行进程变为后台daemon，并监控进程状态，异常退出时能自动重启。
+    通过fork/exec的方式把这些被管理的进程当作supervisor的子进程来启动，这样只要在supervisor的配置文件中，
+    把要管理的进程的可执行文件的路径写进去即可。也实现当子进程挂掉的时候，父进程可以准确获取子进程挂掉的信息的，
+    可以选择是否自己启动和报警。supervisor还提供了一个功能，可以为supervisord或者每个子进程，
+    设置一个非root的user，这个user就可以管理它对应的进程。
+
+                                              
